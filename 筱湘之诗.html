@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://t.tutu.to/img/mNAfS" type="image/x-icon">
+    <title>筱湘之诗</title>
+    <style>
+        .cardBox {
+        height: 250px;
+        background-color: aliceblue;  
+        display: flex; 
+        flex-direction: row; 
+        overflow-x: scroll 
+        }
+        .card {
+            background-color:antiquewhite;
+            width: 25%;
+            padding: 5px;
+            flex-shrink: 0;
+            position: relative;
+            border: 10px solid white;
+        }
+        .attack{
+            position: absolute;
+            left: 5px;
+            bottom: 5px;
+        }
+        .life{
+            position: absolute;
+            right: 5px;
+            bottom: 5px;
+        }
+        .icon{
+            width: 15px;
+            height: 15px;
+        }
+        .name{
+            position: absolute;
+            top: 5px;
+            left: 5px;
+        }
+    </style>
+    <script>
+        function fightArea(){
+            document.getElementById("cardBox").style.display="none"
+        }
+        function myCards(){
+            document.getElementById("cardBox").style.display="flex"
+        }
+    </script>
+</head>
+<body>
+    <button onclick="myCards()">我的卡牌</button>&nbsp;&nbsp;
+    <button onclick="fightArea()">对战区域</button>
+    <hr>
+    <div class="cardBox" id="cardBox" "display:flex;">
+        <div class="card">
+            <div class="name">
+                李才致
+            </div>
+            <div class="attack" name="attack">
+                <img class="icon" src="https://t.tutu.to/img/mNVgP" alt="">
+                1
+            </div>
+            <div class="life" name="life">
+                <img class="icon" src="https://t.tutu.to/img/mNsm4" alt="">
+                1
+            </div>
+        </div>
+    </div>
+</body>
+</html>
